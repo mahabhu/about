@@ -8,7 +8,7 @@
     <style>
         body {
             margin: 0;
-            font-family: 'Cascadia Code', monospace;
+            font-family: 'Cascadia Code', monospace; /* Cascadia for all text */
             background: #f4f4f4;
             color: #444;
             display: flex;
@@ -24,8 +24,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* Align items to the start */
-            padding-top: 10px; /* Add padding if needed */
+            justify-content: flex-start;
+            padding-top: 10px;
             z-index: 1000;
         }
         .sidebar button {
@@ -37,6 +37,8 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            font-family: inherit; /* Inherit font from body */
+            font-size: 1em;
         }
         .sidebar button:hover {
             background-color: #ddd;
@@ -92,6 +94,7 @@
             cursor: pointer;
             font-size: 1em;
             transition: background-color 0.3s ease;
+            font-family: inherit; /* Inherit font from body */
         }
         .btn:hover {
             background-color: #555;
