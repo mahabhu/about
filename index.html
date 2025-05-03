@@ -11,6 +11,38 @@
             font-family: 'Cascadia Code', monospace;
             background: #f4f4f4;
             color: #444;
+            display: flex;
+        }
+        /* Sidebar */
+        .sidebar {
+            background-color: #333;
+            width: 50px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .sidebar button {
+            background-color: #fff;
+            border: none;
+            width: 40px;
+            height: 40px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .sidebar button:hover {
+            background-color: #ddd;
+        }
+        main {
+            margin-left: 70px; /* Adjust based on sidebar width */
+            flex-grow: 1;
         }
         header {
             background-color: #333;
@@ -21,14 +53,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: calc(1.1 * 350px); /* Set initial based on 1.2 times the max-height of image */
+            height: calc(1.2 * 100px); /* Set initial based on 1.2 times the max-height of image */
         }
         .header-title {
             font-size: 2.5em;
             margin: 0;
         }
         .header-image {
-            max-height: 350px;
+            max-height: 100px;
             position: absolute;
             right: 20px;
         }
@@ -68,9 +100,6 @@
             padding: 10px;
             background: #333;
             color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
         }
         @media (max-width: 768px) {
             section {
@@ -81,41 +110,50 @@
 </head>
 <body>
 
-    <header>
-        <h1 class="header-title">Mashroor Hasan Bhuiyan</h1>
-        <img src="assets/imgs/profile_photo.jpg" alt="Profile Image" class="header-image">
-    </header>
+    <div class="sidebar">
+        <button onclick="window.location.href='page1.html'">1</button>
+        <button onclick="window.location.href='page2.html'">2</button>
+        <button onclick="window.location.href='page3.html'">3</button>
+        <button onclick="window.location.href='page4.html'">4</button>
+        <button onclick="window.location.href='page5.html'">5</button>
+        <button onclick="window.location.href='page6.html'">6</button>
+    </div>
 
-    <section>
-        <div class="section-title">About Me</div>
-        <p>Hi! I'm [Your Name], a passionate [Your Profession] based in [Your Location]. I enjoy building everything from small business sites to rich interactive web apps.</p>
-    </section>
+    <main>
+        <header>
+            <h1 class="header-title">Mashroor Hasan Bhuiyan</h1>
+            <img src="assets/imgs/avatar.jpg" alt="Profile Image" class="header-image">
+        </header>
 
-    <section>
-        <div class="section-title">Projects</div>
-        <div class="portfolio-item">
-            <h3>Project One</h3>
-            <p>A brief description of a project you've worked on. Highlight the key features and technologies used.</p>
-        </div>
-        <div class="portfolio-item">
-            <h3>Project Two</h3>
-            <p>Another project description, showcasing what you've done and its impact.</p>
-        </div>
-        <button class="btn" onclick="window.location.href='page1.html'">Go to Page 1</button>
-        <button class="btn" onclick="window.location.href='page2.html'">Go to Page 2</button>
-    </section>
+        <section>
+            <div class="section-title">About Me</div>
+            <p>Hi! I'm [Your Name], a passionate [Your Profession] based in [Your Location]. I enjoy building everything from small business sites to rich interactive web apps.</p>
+        </section>
 
-    <section>
-        <div class="section-title">Contact</div>
-        <p>Feel free to reach out via email: [Your Email]</p>
-        <p>You can also find me on [LinkedIn/Other Social Media Links]</p>
-        <br>
-        <br>
-    </section>
+        <section>
+            <div class="section-title">Projects</div>
+            <div class="portfolio-item">
+                <h3>Project One</h3>
+                <p>A brief description of a project you've worked on. Highlight the key features and technologies used.</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>Project Two</h3>
+                <p>Another project description, showcasing what you've done and its impact.</p>
+            </div>
+            <button class="btn" onclick="window.location.href='page1.html'">Go to Page 1</button>
+            <button class="btn" onclick="window.location.href='page2.html'">Go to Page 2</button>
+        </section>
 
-    <footer>
-        <p>&copy; 2023 [Your Name]. All Rights Reserved.</p>
-    </footer>
+        <section>
+            <div class="section-title">Contact</div>
+            <p>Feel free to reach out via email: [Your Email]</p>
+            <p>You can also find me on [LinkedIn/Other Social Media Links]</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2023 [Your Name]. All Rights Reserved.</p>
+        </footer>
+    </main>
 
 </body>
 </html>
