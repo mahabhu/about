@@ -17,6 +17,19 @@
             color: #fff;
             padding: 20px;
             text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-title {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .header-image {
+            max-height: 100px;
+            position: absolute;
+            right: 20px;
         }
         section {
             padding: 20px;
@@ -68,8 +81,8 @@
 <body>
 
     <header>
-        <h1>Mashroor Hasan Bhuiyan</h1>
-        <p>Welcome to my personal portfolio</p>
+        <h1 class="header-title">Mashroor Hasan Bhuiyan</h1>
+        <img src="asset/imgs/avatar.jpg" alt="Profile Image" class="header-image">
     </header>
 
     <section>
@@ -89,7 +102,6 @@
         </div>
         <button class="btn" onclick="window.location.href='page1.html'">Go to Page 1</button>
         <button class="btn" onclick="window.location.href='page2.html'">Go to Page 2</button>
-        <!-- Add more projects as needed -->
     </section>
 
     <section>
