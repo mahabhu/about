@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Cascadia Code', monospace;
+            background: #f4f4f4;
+            color: #444;
+            display: flex;
+        }
+        .sidebar {
+            background-color: #333;
+            width: 90px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 10px;
+            z-index: 1000;
+        }
+        .sidebar button {
+            background-color: #fff;
+            border: none;
+            width: 70px;
+            height: 70px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: inherit;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+        }
+        .sidebar button:nth-of-type(3) {
+            background-color: #acacac;
+        }
+        .sidebar button:hover {
+            background-color: #ddd;
+        }
+        main {
+            margin-left: 90px;
+            flex-grow: 1;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+        }
+        .header-title {
+            font-size: 1.5em;
+            margin: 0;
+        }
+        section {
+            padding: 20px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .skill-card {
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: transform 0.3s;
+            margin: 10px;
+        }
+        .skill-card img {
+            max-width: 100px;
+            max-height: 100px;
+            margin-bottom: 10px;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <button onclick="window.location.href='index.html'"><i class="fas fa-home"></i></button>
+        <button onclick="window.location.href='career.html'"><i class="fas fa-graduation-cap"></i></button>
+        <button onclick="window.location.href='skills.html'"><i class="fas fa-th-large"></i></button>
+        <button onclick="window.location.href='resume.html'"><i class="fas fa-file-alt"></i></button>
+        <button onclick="window.location.href='contact.html'"><i class="fas fa-paperclip"></i></button>
+    </div>
+
+    <main>
+        <header>
+            <h6 class="header-title">Mashroor Hasan Bhuiyan</h6>
+        </header>
+
+        <section>
+            <div class="section-title">Skills</div>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++">
+                    <div>C++</div>
+                </div>
+                <div class="skill-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+                    <div>Python</div>
+                </div>
+                <div class="skill-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg" alt="Svelte">
+                    <div>Svelte</div>
+                </div>
+                <div class="skill-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/LaTeX_logo.svg" alt="LaTeX">
+                    <div>LaTeX</div>
+                </div>
+                <div class="skill-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js">
+                    <div>Node.js</div>
+                </div>
+                <div class="skill-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" alt="PostgreSQL">
+                    <div>PostgreSQL</div>
+                </div>
+                <div class="skill-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java">
+                    <div>Java</div>
+                </div>
+                <div class="skill-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker">
+                    <div>Docker</div>
+                </div>
+                <div class="skill-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Opengl-logo.svg" alt="OpenGL">
+                    <div>OpenGL</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
